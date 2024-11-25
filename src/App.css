@@ -1,0 +1,260 @@
+*{
+  padding: 0%;
+  margin: 0%;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.myshadow{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* lead Panel Close button */
+@media (max-width: 600px) {
+.leadPanelClose{
+  padding-right: 2%;
+}
+
+}
+@media (max-width: 300px) {
+.leadPanelClose{
+  padding-right: 2%;
+}
+
+}
+
+
+
+/* for scrollbar  */
+.scrollbar-hidden {
+  overflow: -moz-hidden-unscrollable; /* Firefox */
+  overflow: hidden; /* Hide scrollbar for all other browsers */
+  position: relative; /* Necessary for the next rule */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Ensure that the overflow works */
+.scrollbar-hidden {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+
+
+
+
+
+
+/* tables  */
+.antd-thead > tr > th {
+  background-color: #6a6a6f; /* Change to your desired color */
+  color: white; /* Change to your desired text color */
+}
+
+
+/* Add this to your global CSS file */
+.custom-list {
+  list-style-position: inside;
+  margin-left: 1.5rem; /* Indentation */
+}
+
+.custom-list ol {
+  list-style-type: decimal; /* Numbered lists */
+}
+
+.custom-list ul {
+  list-style-type: disc; /* Bulleted lists */
+}
+
+.scroller {
+  width: 100%;
+  max-height: 90px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+.scrollbarHidden{
+  overflow-x: scroll;
+  scrollbar-width: thin;
+
+}
+
+.scroll{
+  scrollbar-width: thin;
+}
+
+ 
+
+
+/* antd table  */
+
+ 
+
+
+/* toaster  */
+
+/* Add this to your App.css or any CSS file */
+.custom-toast .Toastify__toast {
+  min-height: fit-content; /* Adjust this value as needed */
+  display: flex;
+  align-items: center;
+}
+
+.custom-toast .Toastify__toast-body {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+/* notification  */
+
+
+@keyframes slide-in {
+  from {
+    transform: translateY(100%) translateX(100%);
+  }
+  to {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out;
+}
+
+
+
+
+ 
+
+
+
+
+/* App.css or a specific CSS module */
+/* making button 3d  */
+.button3d {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(145deg, #55CDF1, #29AA9E);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 8px 8px 16px #a1a1a1, -8px -8px 16px #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.button3d::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  transition: all 0.4s ease;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.button3d:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.button3d:active {
+  box-shadow: inset 4px 4px 8px #a1a1a1, inset -4px -4px 8px #ffffff;
+  background: #544541;
+}
+
+
+
+.buttonp {
+  background-color: #9f8983;
+  transition: transform 0.3s ease-in, background-color 0.3s ease-in;
+  border-radius: 5px;
+  padding-inline: 10px;
+  padding-block: 4px;
+  color: #ffffff;
+  font-style: normal;
+}
+
+.buttonp:hover {
+  background-color: #77615c;
+  color: rgb(247, 241, 241);
+  /* transform: scale(1.05); */
+}
+
+.buttonp:focus {
+  background-color: #77615c;  
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  outline: none;  
+}
+
+.myHover:hover{
+  background-color: #f0eae9;
+}
+
+.myHoverInput{
+  background-color: transparent;
+}
+
+
+
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(5px); /* Apply the blur effect */
+  position: fixed; /* Make sure it covers the entire viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999; /* Ensure it appears above other elements */
+}
+
+.form-container {
+  backdrop-filter: none; /* Remove backdrop filter from the form container */
+}
+
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffffff 0%, #e5ecec 29%);
+  border-radius: 100px;
+  box-shadow: inset 2px 2px 5px 0 rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #e9f0f0 29%);
+}
+
+
