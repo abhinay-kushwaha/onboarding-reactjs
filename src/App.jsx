@@ -2,9 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
-// import CorporateRoutes from "./Components/Corporate/CorporateRoutes";
-// import CompleteEmployeeRegistration from "./Components/Corporate/AdminPenal/EmployeeMan/EmployeeRegistration";
-// import EmpRoutes from "./Components/Employee/EmpRoutes";
+ 
 import { message } from 'antd';
  
  

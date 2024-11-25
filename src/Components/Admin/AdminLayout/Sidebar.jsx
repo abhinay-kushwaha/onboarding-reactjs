@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Menu, Drawer, Button } from 'antd';
-import { AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
-import Logo from '../../Common/Inner/Logo';
-import './Sidebar.css';
+import React, { useState } from "react";
+import { Menu, Drawer, Button } from "antd";
+import { AppstoreOutlined, SettingOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+import Logo from "../../Common/Inner/Logo";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
@@ -18,43 +18,31 @@ const Sidebar = () => {
   };
 
   const menuItems = (
-    <Menu
-      className="w-full h-screen"
-      mode="inline"
-      openKeys={openKeys}
-      onOpenChange={handleSubMenuChange}
-    >
+    <Menu className="w-full h-screen" mode="inline" openKeys={openKeys} onOpenChange={handleSubMenuChange}>
       <div className="sticky top-0 bg-gray-100 z-10">
         <Logo />
       </div>
 
       {/* Dashboard */}
       <Menu.Item key="/dashboard" icon={<AppstoreOutlined />}>
-        <Link to="/dashboard" onClick={onClose}>Dashboard</Link>
+        <Link to="/dashboard" onClick={onClose}>
+          Dashboard
+        </Link>
       </Menu.Item>
 
       {/* Employee */}
       <Menu.Item key="/employee" icon={<AppstoreOutlined />}>
-        <Link to="/employee" onClick={onClose}>Employee</Link>
+        <Link to="/employee" onClick={onClose}>
+          Employee
+        </Link>
       </Menu.Item>
 
       {/* Settings Submenu */}
-      <Menu.SubMenu
-        key="/employee/settings"
-        icon={<SettingOutlined />}
-        title="Settings"
-      >
-        <Menu.Item key="/employee/settings/changePass">
-          <Link to="/employee/settings/changePass" onClick={onClose}>Change Password</Link>
-        </Menu.Item>
-        <Menu.Item key="/employee/settings/manageProfile">
-          <Link to="/employee/settings/manageProfile" onClick={onClose}>Manage Profile</Link>
-        </Menu.Item>
-        <Menu.Item key="/employee/settings/myAttendance">
-          <Link to="/employee/settings/myAttendance" onClick={onClose}>My Attendance</Link>
-        </Menu.Item>
+      <Menu.SubMenu key="/employee/settings" icon={<SettingOutlined />} title="Settings">
         <Menu.Item key="/employee/settings/manage-my-leaves">
-          <Link to="/employee/settings/manage-my-leaves" onClick={onClose}>My Leaves</Link>
+          <Link to="/employee/settings/manage-my-leaves" onClick={onClose}>
+            My Leaves
+          </Link>
         </Menu.Item>
       </Menu.SubMenu>
     </Menu>
@@ -62,24 +50,13 @@ const Sidebar = () => {
 
   return (
     <>
-      <Button
-        className="sidebar-toggle text-xl relative -top-0 h-10 w-10"
-        onClick={showDrawer}
-      >
+      <Button className="sidebar-toggle text-xl relative -top-0 h-10 w-10" onClick={showDrawer}>
         <AppstoreOutlined className="relative -top-0 -left-2 text-2xl" />
       </Button>
-      <Drawer
-        title="OZONE"
-        placement="left"
-        closable
-        onClose={onClose}
-        visible={drawerVisible}
-      >
+      <Drawer title="OZONE" placement="left" closable onClose={onClose} visible={drawerVisible}>
         {menuItems}
       </Drawer>
-      <div className="sidebar-desktop overflow-x-scroll h-screen">
-        {menuItems}
-      </div>
+      <div className="sidebar-desktop overflow-x-scroll h-screen">{menuItems}</div>
     </>
   );
 };
