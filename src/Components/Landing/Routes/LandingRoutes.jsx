@@ -2,12 +2,12 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import SignUp from "../LandingPage/SignUp";
 import LogIn from "../LandingPage/LogIn";
-import Home from "../LandingPage/Home";
 import LandingLayout from "../Layout/LandingLayout";
 import NewPassword from "../LandingPage/NewPassword";
 import ForgotPass from "../LandingPage/ForgotPass";
 import ThankuSign from "../LandingPage/ThankuSign";
 import OTPVerify from "../LandingPage/OTPVerify";
+import Intro from "../LandingPage/Landing/Intro";
 
 const LandingRoutes = ({ onLogin }) => {
   return (
@@ -17,7 +17,7 @@ const LandingRoutes = ({ onLogin }) => {
           path="*"
           element={
             <LandingLayout>
-              <Home />
+              <Intro />
             </LandingLayout>
           }
         />
@@ -25,7 +25,7 @@ const LandingRoutes = ({ onLogin }) => {
           path="/"
           element={
             <LandingLayout>
-              <Home />
+              <Intro />
             </LandingLayout>
           }
         />
