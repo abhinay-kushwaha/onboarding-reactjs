@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="shadow bg-[#544541] h-20">
+    <div className="shadow   h-20">
       <div className="flex justify-between items-center p-2 sm:px-7 px-3">
         <img className="hidden sm:block sm:h-16 rounded-full" src={logo} alt="logo" />
         <img className="sm:hidden h-16" src={logosmall} alt="logo" />

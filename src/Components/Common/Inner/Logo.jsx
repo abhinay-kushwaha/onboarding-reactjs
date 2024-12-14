@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from "../../../assets/profile.jpg"
+import logo from "../../../assets/images.png"
 
 const Logo = () => {
   return (
-    <div className='h-20 px-3 flex items-center'>
-     <img className='h-12  ' src={logo} alt="" />
+    <div className='h-20  flex items-center justify-center  border myshadow'>
+     <img className='h-20    w-full object-cover  ' src={logo} alt="" />
     </div>
   )
 }

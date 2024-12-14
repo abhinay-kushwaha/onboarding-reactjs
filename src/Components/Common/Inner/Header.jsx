@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Dropdown, Menu, message, Image } from "antd";
 import { UserOutlined, LogoutOutlined, SettingOutlined } from "@ant-design/icons";
-import profi from "../../../assets/profile.jpg";
+import profi from "../../../assets/abhinay.jpg";
 import Sidebar from "../../Admin/AdminLayout/Sidebar";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
@@ -19,7 +20,7 @@ const Header = () => {
   const menu = (
     <Menu>
       <Menu.Item key="1" icon={<UserOutlined />}>
-        Profile
+       <Link to="/admin/settings/profile"> Profile</Link>
       </Menu.Item>
       {/* <Menu.Item key="2" icon={<SettingOutlined />}>
         Settings
@@ -31,20 +32,20 @@ const Header = () => {
   );
 
   return (
-    <div className="flex justify-between items-center bg-[#544541]     h-20">
+    <div className="flex justify-between items-center  myshadow  text-gray-800 bg-gray-50 h-20">
       {/* Left Side: Logo or Name */}
 
       <div className="md:hidden">
         <Sidebar />
       </div>
 
-      <div className="text-white text-xl font-semibold md:pl-3">
+      <div className=" text-xl font-semibold md:pl-3">
         Welcome, <span className="font-bold">Admin</span>
       </div>
 
       {/* Right Side: Profile with Dropdown */}
       <div className="flex items-center space-x-4 pr-3">
-        <div className="text-white cursor-pointer">
+        <div className=" cursor-pointer">
           <span>Admin</span>
         </div>
         <Dropdown overlay={menu} placement="bottomRight" arrow>

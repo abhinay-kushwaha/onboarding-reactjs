@@ -17,31 +17,55 @@ const Sidebar = () => {
     setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
   };
 
+  const handleMenuClick = () => {
+    setOpenKeys([]); // Close all submenus
+    setDrawerVisible(false); // Optionally close the drawer if in mobile view
+  };
+
   const menuItems = (
-    <Menu className="w-full h-screen" mode="inline" openKeys={openKeys} onOpenChange={handleSubMenuChange}>
+    <Menu
+      className="w-full h-screen"
+      mode="inline"
+      openKeys={openKeys}
+      onOpenChange={handleSubMenuChange}
+    >
       <div className="sticky top-0 bg-gray-100 z-10">
         <Logo />
       </div>
 
       {/* Dashboard */}
-      <Menu.Item key="/dashboard" icon={<AppstoreOutlined />}>
-        <Link to="/dashboard" onClick={onClose}>
+      <Menu.Item key="/admin/dashboard" icon={<AppstoreOutlined />}>
+        <Link to="/admin/dashboard" onClick={handleMenuClick}>
           Dashboard
         </Link>
       </Menu.Item>
 
-      {/* Employee */}
-      <Menu.Item key="/employee" icon={<AppstoreOutlined />}>
-        <Link to="/employee" onClick={onClose}>
-          Employee
+      {/* Task */}
+      <Menu.Item key="/admin/projects-status" icon={<AppstoreOutlined />}>
+        <Link to="/admin/projects-status" onClick={handleMenuClick}>
+          Project Status
         </Link>
       </Menu.Item>
 
       {/* Settings Submenu */}
-      <Menu.SubMenu key="/employee/settings" icon={<SettingOutlined />} title="Settings">
-        <Menu.Item key="/employee/settings/manage-my-leaves">
-          <Link to="/employee/settings/manage-my-leaves" onClick={onClose}>
-            My Leaves
+      <Menu.SubMenu
+        key="/admin/settings"
+        icon={<SettingOutlined />}
+        title="Settings"
+      >
+        <Menu.Item key="/admin/settings/profile">
+          <Link to="/admin/settings/profile"  >
+          Profile
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="/admin/settings/dark-theme">
+          <Link to="/admin/settings/dark-theme"  >
+          Dark Theme
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="/admin/settings/wow">
+          <Link to="/admin/settings/wow" >
+           Wow
           </Link>
         </Menu.Item>
       </Menu.SubMenu>
@@ -50,13 +74,24 @@ const Sidebar = () => {
 
   return (
     <>
-      <Button className="sidebar-toggle text-xl relative -top-0 h-10 w-10" onClick={showDrawer}>
+      <Button
+        className="sidebar-toggle text-xl relative -top-0 h-10 w-10"
+        onClick={showDrawer}
+      >
         <AppstoreOutlined className="relative -top-0 -left-2 text-2xl" />
       </Button>
-      <Drawer title="OZONE" placement="left" closable onClose={onClose} visible={drawerVisible}>
+      <Drawer
+        title="OZONE"
+        placement="left"
+        closable
+        onClose={onClose}
+        visible={drawerVisible}
+      >
         {menuItems}
       </Drawer>
-      <div className="sidebar-desktop overflow-x-scroll h-screen">{menuItems}</div>
+      <div className="sidebar-desktop overflow-x-scroll h-screen">
+        {menuItems}
+      </div>
     </>
   );
 };

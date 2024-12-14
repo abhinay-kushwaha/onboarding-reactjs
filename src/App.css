@@ -188,7 +188,7 @@ body {
 
 
 .buttonp {
-  background-color: #9f8983;
+  background-color: #7ec9f5;
   transition: transform 0.3s ease-in, background-color 0.3s ease-in;
   border-radius: 5px;
   padding-inline: 10px;
@@ -198,7 +198,7 @@ body {
 }
 
 .buttonp:hover {
-  background-color: #77615c;
+  background-color: #9591d3;
   color: rgb(247, 241, 241);
   /* transform: scale(1.05); */
 }
@@ -256,5 +256,15 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #ffffff 0%, #e9f0f0 29%);
 }
+
+
+.wow-container {
+  padding: 20px;
+  background: #f0f2f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 
 
