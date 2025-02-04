@@ -8,6 +8,11 @@ import NewPassword from "../LandingPage/NewPassword";
 import ForgotPass from "../LandingPage/ForgotPass";
 import ThankuSign from "../LandingPage/ThankuSign";
 import OTPVerify from "../LandingPage/OTPVerify";
+import Banner from "../LandingPage/Banner";
+import Product from "../LandingPage/Product";
+import AboutUS from "../LandingPage/AboutUS";
+import Privacy from "../LandingPage/Privacy";
+import Terms from "../LandingPage/Terms";
 
 const LandingRoutes = ({ onLogin }) => {
   return (
@@ -17,7 +22,7 @@ const LandingRoutes = ({ onLogin }) => {
           path="*"
           element={
             <LandingLayout>
-              <Home />
+              <Banner />
             </LandingLayout>
           }
         />
@@ -25,7 +30,47 @@ const LandingRoutes = ({ onLogin }) => {
           path="/"
           element={
             <LandingLayout>
+              <Banner />
+            </LandingLayout>
+          }
+        />
+        <Route
+          path="/terms-conditions"
+          element={
+            <LandingLayout>
+              <Terms />
+            </LandingLayout>
+          }
+        />
+        <Route
+          path="/privacy-policy"
+          element={
+            <LandingLayout>
+              <Privacy />
+            </LandingLayout>
+          }
+        />
+        <Route
+          path="/about-us"
+          element={
+            <LandingLayout>
+              <AboutUS />
+            </LandingLayout>
+          }
+        />
+        <Route
+          path="/shop"
+          element={
+            <LandingLayout>
               <Home />
+            </LandingLayout>
+          }
+        />
+        <Route
+          path="/shop/product"
+          element={
+            <LandingLayout>
+              <Product />
             </LandingLayout>
           }
         />

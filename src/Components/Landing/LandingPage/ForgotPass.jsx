@@ -64,7 +64,7 @@ const ForgotPass = () => {
   }, []);
 
   return (
-    <div className="flex md:justify-evenly justify-center gap-2 items-start pt-10 px-4 sm:px-6 lg:px-8   ">
+    <div className="flex md:justify-evenly justify-center gap-2 items-start p-10 px-4 sm:px-6 lg:px-8   ">
       <div data-aos="zoom-in" data-aos-duration="3000" className="border-2 border-gray-300 bg-white rounded-md p-5 max-w-lg w-full myshadow">
         <form className="flex flex-col gap-3" onSubmit={handleSubmit}>
           <h2 className="text-2xl font-bold flex justify-between items-center w-full mb-3">
@@ -103,11 +103,7 @@ const ForgotPass = () => {
         {/* {message && <p className='mt-2 text-center text-sm text-red-500'>{message}</p>} */}
       </div>
 
-      <div className="hidden md:block">
-        <div className="flex justify-start items-center">
-          <img className="w-96" src={emailO} alt="" />
-        </div>
-      </div>
+     
 
       <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleCloseSnackbar} message={message} anchorOrigin={{ vertical: "top", horizontal: "right" }}>
         <Alert onClose={handleCloseSnackbar} severity={message.includes("error") ? "error" : "success"}>

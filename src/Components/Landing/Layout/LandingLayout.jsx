@@ -3,6 +3,7 @@ import Header from "../LandingPage/Header";
 import Footer from "../LandingPage/Footer";
 
 const LandingLayout = ({ children }) => {
+  
   return (
     <div className="flex flex-col justify-between h-screen overflow-y-scroll scrollbar-hidden">
       <div>

@@ -24,24 +24,24 @@ const Sidebar = () => {
       </div>
 
       {/* Dashboard */}
-      <Menu.Item key="/dashboard" icon={<AppstoreOutlined />}>
-        <Link to="/dashboard" onClick={onClose}>
+      <Menu.Item key="/admin/dashboard" icon={<AppstoreOutlined />}>
+        <Link to="/admin/dashboard" onClick={onClose}>
           Dashboard
         </Link>
       </Menu.Item>
 
       {/* Employee */}
-      <Menu.Item key="/employee" icon={<AppstoreOutlined />}>
-        <Link to="/employee" onClick={onClose}>
-          Employee
+      <Menu.Item key="/admin/products" icon={<AppstoreOutlined />}>
+        <Link to="/admin/products" onClick={onClose}>
+          Products
         </Link>
       </Menu.Item>
 
       {/* Settings Submenu */}
-      <Menu.SubMenu key="/employee/settings" icon={<SettingOutlined />} title="Settings">
-        <Menu.Item key="/employee/settings/manage-my-leaves">
-          <Link to="/employee/settings/manage-my-leaves" onClick={onClose}>
-            My Leaves
+      <Menu.SubMenu key="/admin/settings" icon={<SettingOutlined />} title="Settings">
+        <Menu.Item key="/admin/settings/category">
+          <Link to="/admin/settings/category" onClick={onClose}>
+            Category
           </Link>
         </Menu.Item>
       </Menu.SubMenu>

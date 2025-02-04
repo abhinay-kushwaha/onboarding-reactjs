@@ -102,17 +102,13 @@ const Login = ({ onLogin }) => {
     <div className="flex justify-center items-center p-2 my-10">
       {/* {loading && <Loader />}  */}
 
-      <div className="hidden lg:block w-full">
-        <div className="flex justify-center items-center">
-          <img className=" lg:w-96 p-10" src={loginImg} alt="" />
-        </div>
-      </div>
+       
 
-      <div data-aos="zoom-in" data-aos-duration="3000" className="w-full flex p-2  lg:justify-start justify-center  items-center">
+      <div data-aos="zoom-in" data-aos-duration="3000" className="w-full flex p-2    justify-center  items-center">
         <div className="border border-gray-300 rounded-md p-4 max-w-lg w-full flex flex-col myshadow ">
           <div className="sm:text-2xl text-xl font-bold flex flex-col  justify-center items-center -mb-7">
             <h1 className="text-gray-700 w-full flex justify-center gap-2 items-center ">
-              <img className="w-12" src={login} alt="" /> Welcome to <strong className="text-[#544541]"> MY WORLD</strong>
+              <img className="w-12" src={login} alt="" /> Welcome to <strong className="text-[#544541]">FOX PILOTS </strong>
             </h1>
             {/* <h1 className='text-sm font-normal w-full flex justify-center items-center '>
           To get started, please sign in

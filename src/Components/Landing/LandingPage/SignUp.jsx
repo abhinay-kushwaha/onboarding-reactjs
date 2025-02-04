@@ -10,7 +10,7 @@ import { IP } from "../../Utils/Constent";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
-    CorporateName: "",
+    
     name: "",
     email: "",
     number: "",
@@ -77,11 +77,7 @@ const SignUp = () => {
 
   return (
     <div className="flex justify-center items-center w-full p-2 py-10">
-      <div className="hidden lg:block w-full">
-        <div className="flex justify-center items-center">
-          <img className="lg:w-2/3" src={Team} alt="OTP Verification" />
-        </div>
-      </div>
+       
 
       <div className="w-full flex justify-center items-center">
         <div className=" border-b-4  border border-gray-100 border-b-[#544541] bg-white rounded-md p-3 max-w-md w-full flex flex-col myshadow">
@@ -95,19 +91,7 @@ const SignUp = () => {
             </Link>
           </div>
           <form className="flex flex-col gap-1" onSubmit={handleSubmit}>
-            <label className="text-xs px-1 font-semibold relative top-3 left-2 bg-white w-fit rounded-md" htmlFor="CorporateName">
-              Corporate Name
-            </label>
-            <input
-              autoFocus
-              className="border-2 pl-2 p-2 w-full rounded-sm"
-              type="text"
-              name="CorporateName"
-              placeholder="Enter Your Corporate Name"
-              value={formData.CorporateName}
-              onChange={handleChange}
-              required
-            />
+            
             <label className="text-xs px-1 font-semibold relative top-3 left-2 bg-white w-fit rounded-md" htmlFor="name">
               Name
             </label>

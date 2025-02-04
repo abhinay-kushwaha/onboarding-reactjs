@@ -31,7 +31,7 @@ const Header = () => {
   );
 
   return (
-    <div className="flex justify-between items-center bg-[#544541]     h-20">
+    <div className="flex justify-between items-center bg-[#D56A25]     h-20">
       {/* Left Side: Logo or Name */}
 
       <div className="md:hidden">
